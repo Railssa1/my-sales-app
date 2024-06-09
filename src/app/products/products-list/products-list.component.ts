@@ -48,15 +48,4 @@ export class ProductsListComponent implements OnInit {
   onSearch(){
     this.getProducts(this.searchForm.value.searchTerm);
   }
-
-  onAddToCart(item: Product){
-    const cartItem: CartItem = {
-      idProduct: item.id,
-      unitPrice: item.unitPrice,
-      quantity: 1,
-      name: item.name
-    }
-
-    this.cartService.addItem(cartItem);
-  }
 }
